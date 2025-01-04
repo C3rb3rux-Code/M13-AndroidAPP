@@ -67,7 +67,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="110dp"
-            android:layout_height="99dp"
+            android:layout_height="110dp"
             android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

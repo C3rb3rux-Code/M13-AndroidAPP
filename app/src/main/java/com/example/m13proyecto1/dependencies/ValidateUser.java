@@ -43,7 +43,7 @@ public class ValidateUser {
 
                     int responseCode = connection.getResponseCode();
 
-                    System.out.println("Código de respuesta: " + responseCode);
+                    //System.out.println("Código de respuesta: " + responseCode);
 
                     if (responseCode == HttpURLConnection.HTTP_OK) {
                         try {
@@ -53,7 +53,7 @@ public class ValidateUser {
                             e.printStackTrace();
                         }
                     } else {
-                        Toast.makeText(context, "Fallo catastrofico", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Usuario o contraseña no valido", Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (Exception e) {

@@ -42,12 +42,12 @@ public class SportsHUB extends AppCompatActivity {
             //String url = "http://192.168.1.136:8000/api/verify-user";
             String url = "http://192.168.1.70:8000/api/verify-user";
 
-            if (!userS.isEmpty() && !passwordS.isEmpty()) {
+            if (!userS.isEmpty() && !passwordS.isEmpty() && passwordS.length() >= 8) {
                 ValidateUser validate;
                 validate = new ValidateUser(SportsHUB.this);
                 validate.ValidateUserTask(userS, passwordS, url);
             } else {
-                Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Datos no validos", Toast.LENGTH_SHORT).show();
             }
         });
 

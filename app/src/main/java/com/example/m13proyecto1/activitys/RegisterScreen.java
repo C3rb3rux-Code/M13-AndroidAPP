@@ -29,6 +29,7 @@ public class RegisterScreen extends AppCompatActivity {
             return insets;
         });
 
+        //String url = "http://192.168.1.136:8000/api/user/add";
         String url = "http://192.168.1.136:8000/api/user/add";
         EditText name = (EditText)findViewById(R.id.inputName);
         EditText email = (EditText)findViewById(R.id.inputEmail);
@@ -48,7 +49,7 @@ public class RegisterScreen extends AppCompatActivity {
                 newUser = new Register(RegisterScreen.this);
                 newUser.addUser(nameS, emailS, passwordS, phoneS, url);
             } else {
-                //Toast.makeText();
+                Toast.makeText(this, "Datos no validos", Toast.LENGTH_SHORT).show();
             }
         });
     }

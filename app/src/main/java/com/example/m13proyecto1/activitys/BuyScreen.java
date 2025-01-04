@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.m13proyecto1.R;
+import com.example.m13proyecto1.extras.Extra;
+
+import java.time.LocalDate;
 
 public class BuyScreen extends AppCompatActivity {
 
@@ -38,8 +42,13 @@ public class BuyScreen extends AppCompatActivity {
         String cvv = cvvCard.getText().toString();
 
         submit.setOnClickListener(view -> {
-            Intent intent = new Intent(this, thanksToBuy.class);
-            startActivity(intent);
+            if (Extra.validateCard(card) && Extra.validateCVV(cvv) && Extra.validateDate(expired) && owner.isEmpty()) {
+                Intent intent = new Intent(this, thanksToBuy.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "Datos invalidos", Toast.LENGTH_SHORT).show();
+            }
+
         });
     }
 }
