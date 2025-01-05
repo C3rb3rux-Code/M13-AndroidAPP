@@ -29,8 +29,7 @@ public class RegisterScreen extends AppCompatActivity {
             return insets;
         });
 
-        //String url = "http://192.168.1.136:8000/api/user/add";
-        String url = "http://192.168.1.136:8000/api/user/add";
+        String url = "http://127.0.0.1:8000/api/user/add";
         EditText name = (EditText)findViewById(R.id.inputName);
         EditText email = (EditText)findViewById(R.id.inputEmail);
         EditText password = (EditText)findViewById(R.id.inputPassword);

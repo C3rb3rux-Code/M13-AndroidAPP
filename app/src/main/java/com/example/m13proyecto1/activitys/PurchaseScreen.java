@@ -49,7 +49,7 @@ public class PurchaseScreen extends AppCompatActivity {
         if (intent != null) {
             String photo = intent.getStringExtra("productPhoto");
             String name = intent.getStringExtra("productName");
-            String price = intent.getStringExtra("productPrice");
+            String price = intent.getStringExtra("productPrice") + "€";
             arrayProducts.add(new Product(photo, name, price));
             totalPrice.setText(price);
         }

@@ -48,7 +48,6 @@ public class BuyScreen extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Datos invalidos", Toast.LENGTH_SHORT).show();
             }
-
         });
     }
 }

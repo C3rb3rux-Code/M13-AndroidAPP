@@ -35,8 +35,7 @@ import java.util.concurrent.Executors;
 
 public class ProductsScreen extends AppCompatActivity {
 
-    //String url = "http://192.168.1.136:8000/api/products/android";
-    String url = "http://192.168.1.70:8000/api/products/android";
+    String url = "http://127.0.0.1:8000/api/products/android";
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private final Handler handler = new Handler(Looper.getMainLooper());
 
